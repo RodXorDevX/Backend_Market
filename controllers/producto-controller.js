@@ -2,7 +2,7 @@ const productoModel = require('../models/producto-model');
 
 const getProductos = async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit) || 20;
+    const limit = parseInt(req.query.limit) || 100;
     const page = parseInt(req.query.page) || 1;
     const order_by = req.query.order_by || 'id_ASC';
     const vendedor_id = req.query.vendedor_id ? parseInt(req.query.vendedor_id) : undefined;
